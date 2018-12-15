@@ -52,7 +52,7 @@ pub struct GliumDrawer<F: GLGraphicsBackend + 'static> {
 }
 
 impl<F: GLGraphicsBackend + 'static> GliumDrawer<F> {
-    pub fn borrow(&self) -> Ref<F> {
+    pub fn borrow(&self) -> Ref<'_, F> {
         self.display.borrow()
     }
 }
